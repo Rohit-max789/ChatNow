@@ -14,10 +14,8 @@ export const SocketContextProvider = ({ children }) => {
   const { authUser } = useAuth();
   useEffect(() => {
     if (authUser) {
-      const socket = io("https://chatnow-s8u6.onrender.com
-
-", {
-        query: {
+      const socket = io("https://chatnow-s8u6.onrender.com",{
+      query: {
           userId: authUser?._id,
         },
       });
